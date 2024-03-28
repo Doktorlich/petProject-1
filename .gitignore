@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+*.a
+!lib.a
+/TODO
+build/
+doc/*.txt
+doc/**/*.txt
