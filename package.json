@@ -15,5 +15,10 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
-  }
+  },
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
