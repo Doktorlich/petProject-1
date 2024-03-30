@@ -1,0 +1,67 @@
+.header {
+}
+.container {
+    max-width: 1600px;
+
+    // при уменьшении экрана , что бы избежать слипания
+    padding: 0 160px;
+    //автоматическое выравнивание блока по центру
+    margin: 0 auto;
+}
+.nav {
+    // .nav__inner
+    display: flex;
+    justify-content: space-between;
+    height: 82px;
+    padding-top: 20px;
+    &__left-content {
+        display: flex;
+        justify-content: space-between;
+        width: 570px;
+        height: 42px;
+    }
+}
+.logo {
+    width: 113.88px;
+    height: 25.76px;
+    margin: auto 0;
+}
+.menu {
+    // .menu__list
+
+    width: 377px;
+
+    &__list {
+        display: flex;
+        height: 42px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .menu__item
+
+    &__item {
+    }
+
+    // .menu__link
+
+    &__link {
+    }
+}
+.user-nav {
+    // .user-nav__item
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 170px;
+    height: 30px;
+    &__item {
+        width: 30px;
+        height: 30px;
+    }
+
+    // .user-nav__link
+
+    &__link {
+    }
+}

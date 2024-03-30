@@ -1,5 +1,44 @@
 @import "./variables.scss";
 @import "normalize.css";
 @import "./press-footer.scss";
-@import "./nav.scss";
+@import "./header.scss";
+@import "./reset.scss";
+@import "./font";
+@import "./content.scss";
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
 
+body {
+    font-family: "ManropeRegular", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgb(46, 52, 63);
+}
+
+li {
+    list-style-type: none;
+}
+a,
+a:active,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+button {
+    font-family: "ManropeRegular";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    cursor: pointer;
+}
