@@ -1,0 +1,73 @@
+.gallery {
+    // .gallery__inner
+    padding: 100px 160px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+        gap: 22px;
+    }
+
+    // .gallery__h2
+
+    &__h2 {
+        color: rgb(46, 52, 63);
+        font-family: "ManropeBold";
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    // .gallery__list
+
+    &__list {
+        display: flex;
+        gap: 31px;
+    }
+
+    // .gallery__list-item
+
+    &__list-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 684px;
+    }
+
+    // .gallery__img-item
+
+    &__img-item {
+        width: 512.67px;
+        height: 584px;
+    }
+
+    // .gallery__img-caption
+
+    &__img-caption {
+        color: rgb(21, 21, 21);
+        font-family: "ManropeRegular";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: 0px;
+    }
+
+    // .gallery__date-item
+
+    &__date-item {
+        color: rgb(47, 89, 237);
+
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1px;
+    }
+
+    // .gallery__caption-item
+
+    &__caption-item {
+    }
+}
+.container {
+}
