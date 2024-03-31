@@ -1,0 +1,81 @@
+.services {
+    // .services__h2
+    height: 600px;
+
+    padding: 100px 160px;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+        height: 400px;
+        justify-content: space-between;
+    }
+    &__h2 {
+        color: rgb(46, 52, 63);
+        font-family: "ManropeBold";
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 130%;
+        text-align: center;
+    }
+
+    // .services__list
+
+    &__list {
+        display: flex;
+
+        height: 270px;
+        gap: 29px;
+    }
+
+    // .services__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 270px;
+        border: 1px solid rgb(217, 217, 217);
+        padding: 33px 29px;
+    }
+
+    // .services__link
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 54px;
+        height: 54px;
+        border: 0.87px solid rgb(217, 217, 217);
+        border-radius: 100px;
+    }
+
+    // .services__h5
+
+    &__h5 {
+        width: 320.25px;
+        height: 38px;
+
+        color: rgb(46, 52, 63);
+        font-family: "ManropeBold";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 160%;
+    }
+
+    // .services__desc
+
+    &__desc {
+        height: 96px;
+
+        color: rgb(95, 109, 126);
+        font-family: "ManropeRegular";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 200%;
+    }
+}
+.container {
+}

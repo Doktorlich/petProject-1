@@ -1,0 +1,102 @@
+.content {
+}
+.banner {
+    // .banner__inner
+    background: rgb(46, 52, 63);
+    height: 712px;
+    color: rgb(255, 255, 255);
+    background-image: url("../../public/images/pic.png");
+    background-position: center;
+
+    margin: 0 auto;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 712px;
+    }
+
+    // .banner__info
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 1200px;
+        height: 392px;
+    }
+
+    // .banner__h1
+
+    &__h1 {
+        color: rgb(255, 255, 255);
+        font-family: "ManropeRegular";
+        font-size: 96px;
+        font-weight: 400;
+        line-height: 110%;
+
+        width: 1200px;
+        height: 212px;
+        text-align: center;
+    }
+
+    // .banner__desc
+
+    &__desc {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 160%;
+
+        width: 587px;
+        height: 76px;
+        text-align: center;
+    }
+
+    // .banner__buttons
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 316px;
+        height: 52px;
+    }
+}
+.btn-started,
+.btn-more {
+    font-family: "ManropeRegular";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+.btn-started {
+    width: 146px;
+    height: 52px;
+    color: rgb(46, 52, 63);
+    border-radius: 100px;
+    border: none;
+    background: rgb(255, 255, 255);
+    &:active {
+        background-color: #007bff; /* Изначальный цвет фона кнопки */
+        color: #fff;
+        border: none;
+        transition: background-color 0.3s;
+    }
+}
+.btn-more {
+    width: 141px;
+    height: 52px;
+    background-color: rgb(46, 52, 63);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 100px;
+    &:active {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        transition: background-color 0.3s;
+    }
+}
