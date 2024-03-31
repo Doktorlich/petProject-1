@@ -1,0 +1,57 @@
+.contact {
+    // .contact__inner
+    display: flex;
+    justify-content: center;
+
+    padding: 60px 160px;
+
+    &__wrapper {
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        width: 1600px;
+        height: 514px;
+        background: rgb(249, 249, 249);
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 298px;
+        width: 785px;
+    }
+
+    // .contact__h2-desc
+
+    &__h2-desc {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+
+    // .contact__h2
+
+    &__h2 {
+        color: rgb(46, 52, 63);
+        font-family: "ManropeBold";
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    // .contact__desc
+
+    &__desc {
+        color: rgb(46, 52, 63);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 200%;
+    }
+}
+.container {
+}
+.btn-more {
+}
