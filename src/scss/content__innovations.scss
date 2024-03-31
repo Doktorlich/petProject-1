@@ -1,0 +1,49 @@
+.innovations {
+    // .innovations__inner
+    padding: 100px 160px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+       
+        align-items: center;
+    }
+
+    // .innovations__img
+
+    &__img {
+        width: 785px;
+        height: 903px;
+    }
+}
+
+.desc-content {
+    // .desc-content__h2
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 512px;
+    height: 404px;
+
+    &__h2 {
+        color: rgb(46, 52, 63);
+        font-family: "ManropeBold";
+        font-size: 54px;
+        font-weight: 400;
+        line-height: 130%;
+    }
+
+    // .desc-content__p
+
+    &__p {
+        color: rgb(21, 21, 21);
+        font-family: "ManropeRegular";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 200%;
+    }
+}
+.btn-more {
+}
+.container {
+}

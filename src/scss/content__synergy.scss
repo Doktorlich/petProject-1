@@ -1,0 +1,35 @@
+.synergy {
+    // .synergy__img-list
+    padding: 100px 160px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    // .synergy__img-item
+
+    &__img-item {
+        width: 733px;
+        height: 447px;
+    }
+}
+.desc-content {
+    // .desc-content__h2
+
+    &__h2 {
+    }
+
+    // .desc-content__p
+
+    &__p {
+    }
+}
+.btn-more {
+}
