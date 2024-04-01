@@ -206,7 +206,7 @@
               <h2 class="contact__h2">Ideation and solutions are in a constant state of flux.</h2>
               <p class="contact__desc">Ideation and solutions are in a constant state of flux.</p>
             </div>
-            <button class="btn-more">Contact Us</button>
+            <button class="contact__btn btn-more">Contact Us</button>
           </div>
         </div>
       </div>
@@ -257,6 +257,27 @@
     </div>
   </footer>
 
+  <div class="modal-window hidden">
+    <span class="modal-window__exit"><img src="./public/images/cross.svg" alt="x"></span>
+    <div class="modal-window__inner">
+      <aside class="desc-content">
+        <h2 class="desc-content__h2">Let’s talk business</h2>
+        <p class="desc-content__p">Ensure your query is received by the right department quickly, simply by filling in
+          the form we can review and ensure you message is handled by the correct people. We enjoy your feedback and
+          find it invaluable in improving our systems and also our procedures.</p>
+      </aside>
+      <form class="form" action="#" id="mw-id">
+        <!-- <form class="form" action="#" method="post" id="mw-id"> -->
+        <input class="form__field-item" type="text" placeholder="Name" name="name">
+        <input class="form__field-item" type="email" placeholder="Email" name="email">
+        <textarea class="form__area-item" placeholder="Message" name="message"></textarea>
+        <input class="btn-more" type="button" value="Submit" form="mw-id">
+        <!-- <input class="btn-more" type="submit" value="Submit" form="mw-id"> -->
+      </form>
+    </div>
+  </div>
+
+  <div class="overlay hidden"></div>
 </body>
 
 </html>
