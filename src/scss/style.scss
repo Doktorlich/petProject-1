@@ -12,6 +12,7 @@
 @import "./content__contact.scss";
 @import "./footer.scss";
 @import "./modal-window.scss";
+@import "./content__accordion.scss";
 
 html {
     box-sizing: border-box;
@@ -50,6 +51,14 @@ button {
     line-height: 22px;
     cursor: pointer;
 }
+
+.container {
+    max-width: 1620px;
+    // при уменьшении экрана , что бы избежать слипания
+    padding: 0 10px;
+    //автоматическое выравнивание блока по центру
+    margin: 0 auto;
+}
 .overlay {
     position: fixed;
     top: 0;
@@ -64,5 +73,4 @@ button {
 .hidden {
     visibility: hidden;
     opacity: 0;
-    
 }

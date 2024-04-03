@@ -1,13 +1,6 @@
 .header {
 }
-.container {
-    max-width: 1620px;
 
-    // при уменьшении экрана , что бы избежать слипания
-    padding: 0 10px;
-    //автоматическое выравнивание блока по центру
-    margin: 0 auto;
-}
 .nav {
     // .nav__inner
     display: flex;
