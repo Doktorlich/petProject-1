@@ -9,11 +9,10 @@ accBtn.forEach(btn => {
         let pActive = btn.nextElementSibling;
         console.log(pActive);
         if (!exam) {
-            pActive.style.display = "none";
+            pActive.style.maxHeight = 0;
         } else {
             pActive.style.display = "block";
-            pActive.style.height = "200px";
-            pActive.style.transition = "0.9s";
+            pActive.style.maxHeight = pActive.scrollHeight + "px";
         }
     });
 });
