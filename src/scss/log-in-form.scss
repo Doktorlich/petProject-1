@@ -118,11 +118,18 @@
     // .login-form__inp-lbl-chbx
 
     &__inp-lbl-chbx {
+        cursor: pointer;
+        font-family: "ManropeRegular";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
     }
 
     // .login-form__chbx
 
     &__chbx {
+        cursor: pointer;
+        transform: scale(1.2);
     }
     &__ppt {
     }

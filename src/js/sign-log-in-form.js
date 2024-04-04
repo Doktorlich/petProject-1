@@ -36,22 +36,54 @@ const passLg2 = document.getElementById("password-lg2");
 const btnReg = document.querySelector(".login-form__btn-reg");
 const inpPas = document.querySelector(".login-form__inp-pas");
 const inpCnfPas = document.querySelector(".login-form__inp-cnf-pas");
+const lgnChbx = document.querySelector(".login-form__chbx");
+const nickname = document.getElementById("nickname");
+const emailLg = document.getElementById("email-lg");
+
+// pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}
+
+const loverSymbol = /[a-z]/g;
+const upperSymbol = /[A-Z]/g;
+const numbSymbol = /[0-9]/g;
 
 btnReg.addEventListener("click", e => {
-    if (
-        inpPas.value === inpCnfPas.value &&
-        inpPas.value.length >= 5 &&
-        inpCnfPas.value.length >= 5
-    ) {
-        inpPas.style.border = "1px solid #0f0";
-        inpCnfPas.style.border = "1px solid #0f0";
-        alert("Регистрация прошла успешно");
+    if (lgnChbx.checked) {
+        if (nickname.value.length >= 5) {
+            nickname.style.border = "1px solid #0f0";
+            if (emailLg.value.length >= 10) {
+                emailLg.style.border = "1px solid #0f0";
+                if (
+                    inpPas.value === inpCnfPas.value &&
+                    inpPas.value.match(loverSymbol) &&
+                    inpPas.value.match(upperSymbol) &&
+                    inpPas.value.match(numbSymbol) &&
+                    inpPas.value.length >= 5
+                ) {
+                    inpPas.style.border = "1px solid #0f0";
+                    inpCnfPas.style.border = "1px solid #0f0";
+                    alert("Регистрация прошла успешно");
+                } else {
+                    e.preventDefault();
+                    inpPas.style.border = "1px solid #f00";
+                    inpCnfPas.style.border = "1px solid #f00";
+                    console.log(false);
+                    alert(
+                        "Пароли не совпадают или число символов меньше, Пароль должен состоять как минимум из одного большого символа , одного малого символа и чисел",
+                    );
+                }
+            } else {
+                e.preventDefault();
+                emailLg.style.border = "1px solid #f00";
+                alert("Название почты должно состоять минимум из 10 символов");
+            }
+        } else {
+            e.preventDefault();
+            nickname.style.border = "1px solid #f00";
+            alert("Прозвище должно состоять минимум из 5 символов ");
+        }
     } else {
         e.preventDefault();
-        inpPas.style.border = "1px solid #f00";
-        inpCnfPas.style.border = "1px solid #f00";
-        console.log(false);
-        alert("Пароли не совпадают или число символов меньше пяти");
+        alert("Подтвердите прочтение условий политики конфиденциальности");
     }
 });
 

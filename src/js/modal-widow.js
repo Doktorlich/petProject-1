@@ -11,6 +11,8 @@ const close = document.querySelectorAll(".modal-window__exit");
 const animPlay = document.querySelector(".animation-play");
 const btnCncl = document.querySelector(".login-form__btn-cncl");
 
+
+
 // open modal window "contact us"
 contactBtn.addEventListener("click", e => {
     e.preventDefault();

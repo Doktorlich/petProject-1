@@ -48,11 +48,11 @@
               <img src="./public/images/shop.svg" alt="shop">
             </a>
           </li> -->
-          <li class="user-nav__item">
+          <!-- <li class="user-nav__item">
             <a class="user-nav__link" href="#">
               <img src="./public/images/search.svg" alt="search">
             </a>
-          </li>
+          </li> -->
           <li class="user-nav__item">
             <a class="user-nav__link user-nav__profile" href="#">
               <img src="./public/images/profile.svg" alt="profile">
@@ -213,7 +213,7 @@
                 qui officia deserunt mollit anim id est laborum."</p>
             </li>
             <li class="accordion__list">
-              <button type="button" class="accordion__btn">What are the keys to good business?</button>
+              <button type="button" class="accordion__btn">How do I align my business strategy?</button>
               <p class="accordion__p">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -223,7 +223,7 @@
                 qui officia deserunt mollit anim id est laborum."</p>
             </li>
             <li class="accordion__list">
-              <button type="button" class="accordion__btn">What are the keys to good business?</button>
+              <button type="button" class="accordion__btn">How to formulate a growth strategy?</button>
               <p class="accordion__p">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -233,7 +233,7 @@
                 qui officia deserunt mollit anim id est laborum."</p>
             </li>
             <li class="accordion__list">
-              <button type="button" class="accordion__btn">What are the keys to good business?</button>
+              <button type="button" class="accordion__btn">How to measure effective metrics?</button>
               <p class="accordion__p">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -248,8 +248,6 @@
         </div>
       </div>
     </section>
-
-
 
     <section class="contact">
       <div class="container">
@@ -335,8 +333,8 @@
       <div class="signin-form__inner">
         <div class="signin-form__inp-list">
           <label for="email-sgn" class="signin-form__inp-lbl">Email</label>
-          <input type="email" class="signin-form__inp-item" name="email-sgn" id="email-sgn" placeholder="example@gmail.com"
-            required>
+          <input type="email" class="signin-form__inp-item" name="email-sgn" id="email-sgn"
+            placeholder="example@gmail.com" required>
           <label for="password" class="signin-form__inp-lbl">Password</label>
           <input type="password" class="signin-form__inp-item" name="password" id="password-sg" placeholder="Password"
             required>
@@ -357,7 +355,7 @@
   </div>
 
   <div class="login hidden">
-    <form class="login-form" action="login-form" id="login-form" >
+    <form class="login-form" action="login-form" id="login-form">
       <span class="modal-window__exit"><img src="./public/images/cross.svg" alt="x"></span>
       <div class="login-form__inner">
         <div class="login-form__inp-list">
@@ -366,13 +364,13 @@
           <label for="email-lg" class="login-form__inp-lbl">Email</label>
           <input type="email" class="login-form__inp-item" name="email-lg" id="email-lg" placeholder="example@gmail.com"
             required>
-          <label for="password" class="login-form__inp-lbl">Password</label>
+          <label for="password-lg1" class="login-form__inp-lbl">Password</label>
           <input type="password" class="login-form__inp-item  login-form__inp-pas" name="password" id="password-lg1"
-            placeholder="Password" required>
+            placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required>
           <span class="login-form__eye form__eye close-eye"></span>
-          <label for="password" class="login-form__inp-lbl">Confirm password</label>
+          <label for="password-lg2" class="login-form__inp-lbl">Confirm password</label>
           <input type="password" class="login-form__inp-item login-form__inp-cnf-pas" name="password" id="password-lg2"
-            placeholder="Confirm password" required>
+            placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required>
 
         </div>
         <div class="login-form__btn-list">
@@ -380,8 +378,8 @@
           <input type="button" class="login-form__btn-item-left login-form__btn-cncl" value="Cancel">
         </div>
       </div>
-      <label for="rmb-me" class="login-form__inp-lbl-chbx">
-        <input type="checkbox" class="login-form__chbx" name="login-form__ppt" id="login-form__ppt" checked>
+      <label for="login-form__chbx" class="login-form__inp-lbl-chbx">
+        <input type="checkbox" class="login-form__chbx" name="login-form__chbx" id="login-form__chbx" checked>
         By creating an account, you agree to our <span class="login-form__ppt"><a href="#">Privacy Policy
             Terms</a></span>.
       </label>
