@@ -3,6 +3,14 @@ const modalWindow = document.querySelector(".modal-window");
 const overlay = document.querySelector(".overlay");
 const close = document.querySelector(".modal-window__exit");
 const animPlay = document.querySelector(".animation-play");
+const btnProfile = document.querySelector(".user-nav__shop");
+const formSignin = document.querySelector(".signin");
+
+btnProfile.addEventListener("click", e => {
+    e.preventDefault();
+    formSignin.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+});
 
 contactBtn.addEventListener("click", e => {
     e.preventDefault();
@@ -13,21 +21,33 @@ contactBtn.addEventListener("click", e => {
 
 close.addEventListener("click", e => {
     e.preventDefault();
-    modalWindow.classList.add("hidden");
-    overlay.classList.add("hidden");
-    modalWindow.classList.remove("animation-play");
+    if (confirm("exit?")) {
+        modalWindow.classList.add("hidden");
+        overlay.classList.add("hidden");
+        modalWindow.classList.remove("animation-play");
+    }
 });
 
 overlay.addEventListener("click", e => {
     e.preventDefault();
-    modalWindow.classList.add("hidden");
-    overlay.classList.add("hidden");
-    modalWindow.classList.remove("animation-play");
-});
-document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
+    if (confirm("exit?")) {
+        formSignin.classList.add("hidden");
+        overlay.classList.add("hidden");
+
         modalWindow.classList.add("hidden");
         overlay.classList.add("hidden");
         modalWindow.classList.remove("animation-play");
+    }
+});
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+        if (confirm("exit?")) {
+            formSignin.classList.add("hidden");
+            overlay.classList.add("hidden");
+            
+            modalWindow.classList.add("hidden");
+            overlay.classList.add("hidden");
+            modalWindow.classList.remove("animation-play");
+        }
     }
 });

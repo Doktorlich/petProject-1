@@ -2,6 +2,7 @@
 }
 
 .nav {
+    z-index: 99;
     // .nav__inner
     display: flex;
     justify-content: space-between;
@@ -40,6 +41,12 @@
     // .menu__link
 
     &__link {
+        color: rgb(46, 52, 63);
+        font-family: "ManropeRegular";
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 140%;
+        letter-spacing: 1px;
         &:active {
             color: rgb(243, 143, 143);
         }
@@ -52,13 +59,22 @@
     align-items: center;
     width: 170px;
     height: 30px;
+
     &__item {
         width: 30px;
         height: 30px;
+
+        &:hover {
+            background-color: rgb(238, 238, 238);
+        }
     }
 
     // .user-nav__link
 
     &__link {
     }
+}
+.nav.sticky {
+    position: fixed;
+    background-color: rgb(255, 255, 255);
 }

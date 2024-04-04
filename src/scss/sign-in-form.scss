@@ -1,0 +1,124 @@
+.signin {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 700px;
+
+    padding: 70px 25px 25px 25px;
+
+    border-radius: 10px;
+    background: rgb(247, 247, 247);
+    background-image: url("../../public/images/pattern.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.signin-form {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__inp-list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .signin-form__inp-lbl
+
+    &__inp-lbl {
+        color: rgb(46, 52, 63);
+        font-family: "ManropeBold";
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 200%;
+    }
+
+    // .signin-form__inp-item
+
+    &__inp-item {
+        width: 440px;
+        height: 86px;
+        color: rgb(46, 52, 63);
+        font-family: "ManropeRegular";
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 200%;
+    }
+
+    // .signin-form__btn-item
+    &__btn-list {
+        display: flex;
+        justify-content: center;
+    }
+    &__btn-item-left,
+    &__btn-item-right {
+        width: 300px;
+        height: 52px;
+        cursor: pointer;
+
+        background-color: rgb(46, 52, 63);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(217, 217, 217);
+
+        &:active {
+            background-color: rgb(131, 146, 175);
+            color: #fff;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        font-family: "ManropeRegular";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+    &__btn-item-left {
+        border-top-right-radius: 70px;
+        border-bottom-right-radius: 70px;
+    }
+
+    &__btn-item-right {
+        border-top-left-radius: 70px;
+        border-bottom-left-radius: 70px;
+    }
+    // .signin-form__chbx
+
+    &__chbx {
+        margin-right: 8px;
+        transform: scale(1.7);
+        cursor: pointer;
+    }
+    &__inp-lbl-chbx {
+        color: rgb(46, 52, 63);
+        font-family: "ManropeRegular";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 200%;
+    }
+}
+.login-form {
+    // .login-form__btn-list
+}
+
+.signin-form__eye {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 20%;
+    bottom: 8%;
+    cursor: pointer;
+}
+.open-eye {
+    background-image: url("../../public/images/open-eye.svg");
+    background-repeat: no-repeat;
+}
+.close-eye {
+    background-image: url("../../public/images/close-eye.svg");
+    background-repeat: no-repeat;
+}

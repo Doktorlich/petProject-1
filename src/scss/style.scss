@@ -13,6 +13,8 @@
 @import "./footer.scss";
 @import "./modal-window.scss";
 @import "./content__accordion.scss";
+@import "./log-in-form.scss";
+@import "./sign-in-form.scss";
 
 html {
     box-sizing: border-box;
@@ -67,7 +69,7 @@ button {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
-
+    z-index: 99;
     transition: all 0.3s;
 }
 .hidden {

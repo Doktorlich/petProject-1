@@ -1,6 +1,7 @@
 .accordion {
     // .accordion__inner
     padding: 100px 160px;
+
     &__inner {
         display: flex;
         flex-direction: column;
@@ -36,6 +37,7 @@
     // .accordion__btn
 
     &__btn {
+        z-index: 98;
         position: relative;
         text-align: left;
 
