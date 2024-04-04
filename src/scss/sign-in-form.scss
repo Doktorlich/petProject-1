@@ -65,7 +65,7 @@
         background-color: rgb(46, 52, 63);
         color: rgb(255, 255, 255);
         border: 1px solid rgb(217, 217, 217);
-        
+
         &:active {
             background-color: rgb(131, 146, 175);
             color: #fff;
@@ -80,14 +80,14 @@
     }
 
     &__btn-item-left {
+        border-top-left-radius: 70px;
+        border-bottom-left-radius: 70px;
+    }
+    &__btn-item-right {
         border-top-right-radius: 70px;
         border-bottom-right-radius: 70px;
     }
 
-    &__btn-item-right {
-        border-top-left-radius: 70px;
-        border-bottom-left-radius: 70px;
-    }
     // .signin-form__chbx
 
     &__chbx {
