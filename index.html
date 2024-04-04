@@ -18,7 +18,7 @@
     <div class="container">
       <nav class="nav">
         <div class="nav__left-content">
-          <a class="logo" href="#">
+          <a class="logo" href="#banner">
             <img src="./public/images/logo-container.svg" alt="">
           </a>
           <div class="menu">
@@ -54,7 +54,7 @@
             </a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link user-nav__shop" href="#">
+            <a class="user-nav__link user-nav__profile" href="#">
               <img src="./public/images/profile.svg" alt="profile">
             </a>
           </li>
@@ -67,7 +67,7 @@
 
   <main class="content">
 
-    <section class="banner">
+    <section class="banner" id="banner">
 
 
       <div class="container">
@@ -329,20 +329,18 @@
     </div>
   </div>
 
-  <div class="overlay hidden"></div>
-
   <div class="signin hidden">
-    <form action="signin-form">
-
+    <form class="signin-form" action="signin-form" id="signin-form">
+      <span class="modal-window__exit"><img src="./public/images/cross.svg" alt="x"></span>
       <div class="signin-form__inner">
         <div class="signin-form__inp-list">
           <label for="email" class="signin-form__inp-lbl">Email</label>
           <input type="email" class="signin-form__inp-item" name="email" id="email" placeholder="example@gmail.com"
             required>
           <label for="password" class="signin-form__inp-lbl">Password</label>
-          <input type="password" class="signin-form__inp-item" name="password" id="password" placeholder="Password"
+          <input type="password" class="signin-form__inp-item" name="password" id="password-sg" placeholder="Password"
             required>
-          <span class="signin-form__eye open-eye close-eye"></span>
+          <span class="signin-form__eye form__eye close-eye"></span>
         </div>
         <div class="signin-form__btn-list">
           <input type="submit" class="signin-form__btn-item-right" value="Sign up">
@@ -358,6 +356,39 @@
     </form>
   </div>
 
+  <div class="login ">
+    <form class="login-form" action="login-form" id="login-form">
+      <span class="modal-window__exit"><img src="./public/images/cross.svg" alt="x"></span>
+      <div class="login-form__inner">
+        <div class="login-form__inp-list">
+          <label for="nickname" class="login-form__inp-lbl">Nickname</label>
+          <input type="text" class="login-form__inp-item" name="nickname" id="nickname" placeholder="Nickname" required>
+          <label for="email" class="login-form__inp-lbl">Email</label>
+          <input type="email" class="login-form__inp-item" name="email" id="email" placeholder="example@gmail.com"
+            required>
+          <label for="password" class="login-form__inp-lbl">Password</label>
+          <input type="password" class="login-form__inp-item  login-form__inp-pas" name="password" id="password-lg1"
+            placeholder="Password" required>
+          <span class="login-form__eye form__eye close-eye"></span>
+          <label for="password" class="login-form__inp-lbl">Confirm password</label>
+          <input type="password" class="login-form__inp-item login-form__inp-cnf-pas" name="password" id="password-lg2"
+            placeholder="Confirm password" required>
+
+        </div>
+        <div class="login-form__btn-list">
+          <input type="submit" class="login-form__btn-item-right" value="Registeration">
+          <input type="button" class="login-form__btn-item-left" value="Cancel">
+        </div>
+      </div>
+      <label for="rmb-me" class="login-form__inp-lbl-chbx">
+        <input type="checkbox" class="login-form__chbx" name="rmb-me" id="rmb-me" checked>
+        By creating an account, you agree to our <span class="login-form__ppt"><a href="#">Privacy Policy Terms</a></span>.
+      </label>
+
+    </form>
+  </div>
+
+  <div class="overlay hidden"></div>
 </body>
 
 </html>
