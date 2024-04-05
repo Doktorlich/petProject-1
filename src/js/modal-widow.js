@@ -11,8 +11,6 @@ const close = document.querySelectorAll(".modal-window__exit");
 const animPlay = document.querySelector(".animation-play");
 const btnCncl = document.querySelector(".login-form__btn-cncl");
 
-
-
 // open modal window "contact us"
 contactBtn.addEventListener("click", e => {
     e.preventDefault();
@@ -54,19 +52,22 @@ overlay.addEventListener("click", e => {
         overlay.classList.add("hidden");
     }
 });
+
 document.addEventListener("keydown", e => {
     if (e.key === "Escape") {
-        if (confirm("exit?")) {
-            formSignin.classList.add("hidden");
-            formSignin.classList.remove("animation-play");
+        if (!overlay.classList.contains("hidden")) {
+            if (confirm("exit?")) {
+                formSignin.classList.add("hidden");
+                formSignin.classList.remove("animation-play");
 
-            formLogin.classList.add("hidden");
-            formLogin.classList.remove("animation-play");
+                formLogin.classList.add("hidden");
+                formLogin.classList.remove("animation-play");
 
-            modalWindow.classList.add("hidden");
-            modalWindow.classList.remove("animation-play");
+                modalWindow.classList.add("hidden");
+                modalWindow.classList.remove("animation-play");
 
-            overlay.classList.add("hidden");
+                overlay.classList.add("hidden");
+            }
         }
     }
 });

@@ -1,8 +1,14 @@
 .content {
 }
+.container {
+}
 .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     // .banner__inner
     background: rgb(46, 52, 63);
+
     height: 712px;
     color: rgb(255, 255, 255);
     background-image: url("../../public/images/pic.png");

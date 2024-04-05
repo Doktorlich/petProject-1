@@ -38,8 +38,16 @@
     // .gallery__img-item
 
     &__img-item {
+        position: relative;
         width: 512.67px;
         height: 584px;
+        z-index: 0;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+            transition: 0.9s;
+        }
     }
 
     // .gallery__img-caption
