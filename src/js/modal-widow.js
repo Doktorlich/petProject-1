@@ -11,14 +11,17 @@ const close = document.querySelectorAll(".modal-window__exit");
 const animPlay = document.querySelector(".animation-play");
 const btnCncl = document.querySelector(".login-form__btn-cncl");
 
+const scrollOff = document.body;
+
 // open modal window "contact us"
 contactBtn.addEventListener("click", e => {
     e.preventDefault();
     modalWindow.classList.remove("hidden");
     overlay.classList.remove("hidden");
     modalWindow.classList.add("animation-play");
+    scrollOff.style.overflow = "hidden";
 });
-
+//exit
 close.forEach(element => {
     element.addEventListener("click", e => {
         e.preventDefault();
@@ -32,11 +35,12 @@ close.forEach(element => {
             modalWindow.classList.add("hidden");
             modalWindow.classList.remove("animation-play");
 
+            scrollOff.style.overflow = "scroll";
             overlay.classList.add("hidden");
         }
     });
 });
-
+//exit
 overlay.addEventListener("click", e => {
     e.preventDefault();
     if (confirm("exit?")) {
@@ -49,10 +53,11 @@ overlay.addEventListener("click", e => {
         modalWindow.classList.add("hidden");
         modalWindow.classList.remove("animation-play");
 
+        scrollOff.style.overflow = "scroll";
         overlay.classList.add("hidden");
     }
 });
-
+//exit
 document.addEventListener("keydown", e => {
     if (e.key === "Escape") {
         if (!overlay.classList.contains("hidden")) {
@@ -66,18 +71,19 @@ document.addEventListener("keydown", e => {
                 modalWindow.classList.add("hidden");
                 modalWindow.classList.remove("animation-play");
 
+                scrollOff.style.overflow = "scroll";
                 overlay.classList.add("hidden");
             }
         }
     }
 });
-
+//exit from register form
 btnCncl.addEventListener("click", e => {
     e.preventDefault();
     if (confirm("exit?")) {
         formLogin.classList.add("hidden");
         formLogin.classList.remove("animation-play");
-
+        scrollOff.style.overflow = "scroll";
         overlay.classList.add("hidden");
     }
 });

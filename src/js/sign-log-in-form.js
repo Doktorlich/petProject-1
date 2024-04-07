@@ -9,6 +9,7 @@ const modalWindow = document.querySelector(".modal-window");
 const overlay = document.querySelector(".overlay");
 const close = document.querySelectorAll(".modal-window__exit");
 const animPlay = document.querySelector(".animation-play");
+const scrollOff = document.body;
 
 // open modal window "login"
 btnLogin.addEventListener("click", e => {
@@ -17,6 +18,8 @@ btnLogin.addEventListener("click", e => {
     formSignin.classList.add("hidden");
     formLogin.classList.add("animation-play");
     formSignin.classList.remove("animation-play");
+
+    scrollOff.style.overflow = "hidden";
 });
 // open modal window "signin"
 btnProfile.addEventListener("click", e => {
@@ -24,9 +27,10 @@ btnProfile.addEventListener("click", e => {
     formSignin.classList.remove("hidden");
     formSignin.classList.add("animation-play");
     overlay.classList.remove("hidden");
+    scrollOff.style.overflow = "hidden";
 });
 
-// Show/hide password
+
 
 const spanPassEye = document.querySelectorAll(".form__eye");
 const passSg = document.getElementById("password-sg");
@@ -40,7 +44,7 @@ const lgnChbx = document.querySelector(".login-form__chbx");
 const nickname = document.getElementById("nickname");
 const emailLg = document.getElementById("email-lg");
 
-// pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}
+// pagination registration
 
 const loverSymbol = /[a-z]/g;
 const upperSymbol = /[A-Z]/g;
@@ -86,7 +90,7 @@ btnReg.addEventListener("click", e => {
         alert("Подтвердите прочтение условий политики конфиденциальности");
     }
 });
-
+// Show/hide password
 spanPassEye.forEach(element => {
     element.addEventListener("click", e => {
         e.preventDefault();

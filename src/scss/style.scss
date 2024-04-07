@@ -78,7 +78,7 @@ button {
     transition: all 0.3s;
 }
 .hidden {
-    animation-direction: reverse;
+    overflow: hidden;
     visibility: hidden;
     opacity: 0;
 }
