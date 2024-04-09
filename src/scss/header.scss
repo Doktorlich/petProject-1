@@ -1,4 +1,5 @@
 .header {
+    height: 82px;
 }
 
 .nav {
@@ -15,7 +16,6 @@
         width: 570px;
         height: 42px;
     }
- 
 }
 .logo {
     width: 113.88px;
@@ -78,4 +78,7 @@
 .nav.sticky {
     position: fixed;
     background-color: rgb(255, 255, 255);
+}
+.section {
+    transition: all 0.9s;
 }

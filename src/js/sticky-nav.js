@@ -2,7 +2,7 @@ const nav = document.querySelector(".nav");
 const banner = document.querySelector(".banner");
 
 const navHeight = nav.getBoundingClientRect().height;
-console.log(nav);
+
 const callback = entries => {
     const entry = entries[0];
     if (!entry.isIntersecting) {
@@ -18,5 +18,5 @@ const options = {
     rootMargin: `-${navHeight}px`,
 };
 
-const observe = new IntersectionObserver(callback, options);
-observe.observe(banner);
+const headerObserve = new IntersectionObserver(callback, options);
+headerObserve.observe(banner);

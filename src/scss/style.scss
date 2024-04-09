@@ -27,6 +27,17 @@ html {
 }
 
 body {
+    overflow: auto;
+}
+body::-webkit-scrollbar {
+    width: 1em;
+    background-color: #f5f5f5;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+body {
     font-family: "ManropeRegular", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -55,9 +66,6 @@ button {
     cursor: pointer;
 }
 .container-main {
- 
-
-   
 }
 .container {
     max-width: 1600px;
@@ -81,4 +89,8 @@ button {
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
+}
+.block-hidden-lazy {
+    opacity: 0;
+    transform: translateY(9rem);
 }
