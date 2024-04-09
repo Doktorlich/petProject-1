@@ -6,9 +6,7 @@ const allSection = document.querySelectorAll(".section");
 
 const appearanceSection = function (entries, observer) {
     const entry = entries[0];
-
     if (!entry.isIntersecting) return;
-    console.log(entry);
     entry.target.classList.remove("block-hidden-lazy");
     observer.unobserve(entry.target);
 };

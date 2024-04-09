@@ -1,5 +1,6 @@
 .header {
     height: 82px;
+width: 100%;
 }
 
 .nav {
@@ -9,11 +10,12 @@
     justify-content: space-between;
     height: 82px;
     width: 1600px;
+  
     padding-top: 20px;
     &__left-content {
         display: flex;
         justify-content: space-between;
-        width: 570px;
+        width: 650px;
         height: 42px;
     }
 }
@@ -25,7 +27,7 @@
 .menu {
     // .menu__list
 
-    width: 377px;
+    width: 450px;
 
     &__list {
         display: flex;
