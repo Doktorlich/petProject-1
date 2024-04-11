@@ -16,16 +16,15 @@ function movingSlide(element) {
 }
 movingSlide(0);
 
-arrowLeft.addEventListener("click", () => {
+function prevSlide() {
     if (currentSlide === 0) {
         currentSlide = maxSlides - 3;
     } else {
         currentSlide--;
     }
     movingSlide(currentSlide);
-});
-
-arrowRight.addEventListener("click", () => {
+}
+function nextSlide() {
     if (currentSlide === maxSlides - 3) {
         currentSlide = 0;
     } else {
@@ -33,4 +32,13 @@ arrowRight.addEventListener("click", () => {
     }
 
     movingSlide(currentSlide);
+}
+//moving by arrows
+arrowLeft.addEventListener("click", prevSlide);
+arrowRight.addEventListener("click", nextSlide);
+//moving by key arrows
+document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") prevSlide();
+    if (e.key === "ArrowRight") nextSlide();
 });
+

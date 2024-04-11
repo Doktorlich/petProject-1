@@ -5,4 +5,5 @@ import "./sticky-nav.js";
 import "./sign-log-in-form.js";
 import "./mw-gallery.js";
 import "./appearance.js";
-import "./lazy-loading.js";
+import "./lazy-load.js";
+import "./softScroll.js";

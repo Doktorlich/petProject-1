@@ -98,6 +98,7 @@
 .soc-web {
     // .soc-web__soc-web-item
 
-    &__soc-web-item {
+    &__soc-web-item > a {
+        color: rgb(255, 255, 255);
     }
 }
