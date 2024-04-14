@@ -7,3 +7,4 @@ import "./mw-gallery.js";
 import "./appearance.js";
 import "./lazy-load.js";
 import "./softScroll.js";
+import "./oop.js";

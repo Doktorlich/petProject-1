@@ -388,19 +388,23 @@
       <span class="modal-window__exit"><img src="./public/images/cross.svg" alt="x"></span>
       <div class="login-form__inner">
         <div class="login-form__inp-list">
-          <label for="nickname" class="login-form__inp-lbl">Nickname</label>
+          <!-- <label for="nickname" class="login-form__inp-lbl">Nickname</label> -->
           <input type="text" class="login-form__inp-item" name="nickname" id="nickname" placeholder="Nickname" required>
-          <label for="email-lg" class="login-form__inp-lbl">Email</label>
+          <span class="login__warning wng-itm-1 hidden">Имя должно состоять из минимум 5 символов</span>
+          <!-- <label for="email-lg" class="login-form__inp-lbl">Email</label> -->
           <input type="email" class="login-form__inp-item" name="email-lg" id="email-lg" placeholder="example@gmail.com"
             required>
-          <label for="password-lg1" class="login-form__inp-lbl">Password</label>
+          <!-- <label for="password-lg1" class="login-form__inp-lbl">Password</label> -->
+          <span class="login__warning wng-itm-2 hidden">Имя должно состоять из минимум 10 символов</span>
           <input type="password" class="login-form__inp-item  login-form__inp-pas" name="password-lg1" id="password-lg1"
             placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" form="login-form" required>
           <span class="login-form__eye form__eye close-eye"></span>
-          <label for="password-lg2" class="login-form__inp-lbl">Confirm password</label>
+          <!-- <label for="password-lg2" class="login-form__inp-lbl">Confirm password</label> -->
+          <span class="login__warning wng-itm-3 hidden">Пароль должен состоять из минимум 5 символов и содержать символы:строчные, заглавыне, цифры </span>
           <input type="password" class="login-form__inp-item login-form__inp-cnf-pas" name="password-lg2"
             id="password-lg2" placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"
             form="login-form" required>
+          <span class="login__warning wng-itm-4 hidden">Пароли должны свопадать </span>
 
         </div>
         <div class="login-form__btn-list">

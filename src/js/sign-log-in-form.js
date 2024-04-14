@@ -30,8 +30,6 @@ btnProfile.addEventListener("click", e => {
     scrollOff.style.overflow = "hidden";
 });
 
-
-
 const spanPassEye = document.querySelectorAll(".form__eye");
 const passSg = document.getElementById("password-sg");
 const passLg1 = document.getElementById("password-lg1");
@@ -50,47 +48,118 @@ const loverSymbol = /[a-z]/g;
 const upperSymbol = /[A-Z]/g;
 const numbSymbol = /[0-9]/g;
 
-btnReg.addEventListener("click", e => {
+// btnReg.addEventListener("click", e => {
+//     if (lgnChbx.checked) {
+//         if (nickname.value.length >= 5) {
+//             nickname.style.border = "1px solid #0f0";
+//             if (emailLg.value.length >= 10) {
+//                 emailLg.style.border = "1px solid #0f0";
+//                 if (
+//                     inpPas.value === inpCnfPas.value &&
+//                     inpPas.value.match(loverSymbol) &&
+//                     inpPas.value.match(upperSymbol) &&
+//                     inpPas.value.match(numbSymbol) &&
+//                     inpPas.value.length >= 5
+//                 ) {
+//                     inpPas.style.border = "1px solid #0f0";
+//                     inpCnfPas.style.border = "1px solid #0f0";
+//                     alert("Регистрация прошла успешно");
+//                 } else {
+//                     e.preventDefault();
+//                     inpPas.style.border = "1px solid #f00";
+//                     inpCnfPas.style.border = "1px solid #f00";
+//                     console.log(false);
+//                     alert(
+//                         "Пароли не совпадают или число символов меньше, Пароль должен состоять как минимум из одного большого символа , одного малого символа и чисел",
+//                     );
+//                 }
+//             } else {
+//                 e.preventDefault();
+//                 emailLg.style.border = "1px solid #f00";
+//                 alert("Название почты должно состоять минимум из 10 символов");
+//             }
+//         } else {
+//             e.preventDefault();
+//             nickname.style.border = "1px solid #f00";
+//             alert("Прозвище должно состоять минимум из 5 символов ");
+//         }
+//     } else {
+//         e.preventDefault();
+//         alert("Подтвердите прочтение условий политики конфиденциальности");
+//     }
+// });
+// Show/hide password
+
+const wngItms = document.querySelectorAll(".login__warning");
+console.log(wngItms);
+const [wngItm1, wngItm2, wngItm3, wngItm4] = wngItms;
+console.log(wngItm1, wngItm2, wngItm3, wngItm4);
+
+const verifLgnChbx = function (e) {
     if (lgnChbx.checked) {
-        if (nickname.value.length >= 5) {
-            nickname.style.border = "1px solid #0f0";
-            if (emailLg.value.length >= 10) {
-                emailLg.style.border = "1px solid #0f0";
-                if (
-                    inpPas.value === inpCnfPas.value &&
-                    inpPas.value.match(loverSymbol) &&
-                    inpPas.value.match(upperSymbol) &&
-                    inpPas.value.match(numbSymbol) &&
-                    inpPas.value.length >= 5
-                ) {
-                    inpPas.style.border = "1px solid #0f0";
-                    inpCnfPas.style.border = "1px solid #0f0";
-                    alert("Регистрация прошла успешно");
-                } else {
-                    e.preventDefault();
-                    inpPas.style.border = "1px solid #f00";
-                    inpCnfPas.style.border = "1px solid #f00";
-                    console.log(false);
-                    alert(
-                        "Пароли не совпадают или число символов меньше, Пароль должен состоять как минимум из одного большого символа , одного малого символа и чисел",
-                    );
-                }
-            } else {
-                e.preventDefault();
-                emailLg.style.border = "1px solid #f00";
-                alert("Название почты должно состоять минимум из 10 символов");
-            }
-        } else {
-            e.preventDefault();
-            nickname.style.border = "1px solid #f00";
-            alert("Прозвище должно состоять минимум из 5 символов ");
-        }
+        wngItm1.classList.add("hidden");
+        return true;
     } else {
         e.preventDefault();
-        alert("Подтвердите прочтение условий политики конфиденциальности");
+    }
+};
+const verifNickname = function (e) {
+    if (nickname.value.length >= 5) {
+        nickname.style.border = "1px solid #0f0";
+        wngItm1.classList.add("hidden");
+        return true;
+    } else {
+        e.preventDefault();
+        nickname.style.border = "1px solid #f00";
+        wngItm1.classList.remove("hidden");
+    }
+};
+const verifEmailLg = function (e) {
+    if (emailLg.value.length >= 10) {
+        emailLg.style.border = "1px solid #0f0";
+        wngItm2.classList.add("hidden");
+        return true;
+    } else {
+        e.preventDefault();
+        emailLg.style.border = "1px solid #f00";
+        wngItm2.classList.remove("hidden");
+    }
+};
+const comparePass = function (e) {
+    if (
+        inpPas.value === inpCnfPas.value &&
+        inpPas.value.match(loverSymbol) &&
+        inpPas.value.match(upperSymbol) &&
+        inpPas.value.match(numbSymbol) &&
+        inpPas.value.length >= 5
+    ) {
+        inpPas.style.border = "1px solid #0f0";
+        inpCnfPas.style.border = "1px solid #0f0";
+        wngItm3.classList.add("hidden");
+        wngItm4.classList.add("hidden");
+        return true;
+    } else {
+        e.preventDefault();
+        inpPas.style.border = "1px solid #f00";
+        inpCnfPas.style.border = "1px solid #f00";
+        console.log(false);
+        wngItm3.classList.remove("hidden");
+        wngItm4.classList.remove("hidden");
+    
+    }
+};
+btnReg.addEventListener("click", e => {
+    verifLgnChbx(e);
+    verifNickname(e);
+    verifEmailLg(e);
+    comparePass(e);
+    if (verifLgnChbx(e) && verifNickname(e) && verifEmailLg(e) && comparePass(e)) {
+        alert("Регистарция прошла успешно ");
+    } else {
+        alert("В одном из полей допущена ошибка");
     }
 });
-// Show/hide password
+
 spanPassEye.forEach(element => {
     element.addEventListener("click", e => {
         e.preventDefault();
