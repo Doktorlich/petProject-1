@@ -87,3 +87,26 @@ btnCncl.addEventListener("click", e => {
         overlay.classList.add("hidden");
     }
 });
+
+//.form__area-item
+
+// .counter
+
+// .counter__numb
+
+// .counter__max-length
+
+//1 должны подключить основные переменные
+const areaItem = document.querySelector(".form__area-item");
+let counterNumb = document.querySelector(".counter__numb");
+
+
+//2 подключить к элементу который необходимо отслеживать слушатель событий
+
+//3 осуществить подсчет количества символов в блоке
+//4 вывести текущее в и максимальное количество количество символо в спан
+
+areaItem.addEventListener("input", e => {
+    counterNumb.innerHTML = areaItem.value.length;
+});
+//5 стилизовать блок подсчета

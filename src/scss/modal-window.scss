@@ -36,6 +36,7 @@
 
 .form {
     // .form__field-item
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -66,6 +67,19 @@
         height: 200px;
         padding: 16px;
         resize: none;
+    }
+    .counter {
+        position: absolute;
+        bottom: 30%;
+        right: 2%;
+
+        &__numb {
+        }
+
+        // .counter__max-length
+
+        &__max-length {
+        }
     }
 }
 input.btn-more {

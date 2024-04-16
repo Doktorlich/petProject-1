@@ -42,7 +42,7 @@ const lgnChbx = document.querySelector(".login-form__chbx");
 const nickname = document.getElementById("nickname");
 const emailLg = document.getElementById("email-lg");
 
-// pagination registration
+// validation registration
 
 const loverSymbol = /[a-z]/g;
 const upperSymbol = /[A-Z]/g;
@@ -91,9 +91,8 @@ const numbSymbol = /[0-9]/g;
 // Show/hide password
 
 const wngItms = document.querySelectorAll(".login__warning");
-console.log(wngItms);
 const [wngItm1, wngItm2, wngItm3, wngItm4] = wngItms;
-console.log(wngItm1, wngItm2, wngItm3, wngItm4);
+
 
 const verifLgnChbx = function (e) {
     if (lgnChbx.checked) {

@@ -281,6 +281,30 @@
         </div>
       </section>
 
+      <section class="course-volute section">
+        <div class="container">
+          <div class="course-volute__inner">
+            <h2 class="course-volute__h2">Exchange rates against the RUB</h2>
+            <h2 class="course-volute__h2 current-date">Exchange rates as of date:</h2>
+            <table class="table-menu">
+              <thead class="table-menu__head-list">
+                <tr class="table-menu__head-row">
+                  <th class="table-menu__title arrow-ttl-up arrow-ttl-down" data-position="0">№</th>
+                  <th class="table-menu__title arrow-ttl-up arrow-ttl-down" data-position="1">CharCode </th>
+                  <th class="table-menu__title arrow-ttl-up arrow-ttl-down" data-position="2">Name </th>
+                 
+                  <th class="table-menu__title arrow-ttl-up arrow-ttl-down" data-position="3">Nominal</th>
+                  <th class="table-menu__title arrow-ttl-up arrow-ttl-down" data-position="4">NumCode</th>
+                  <!-- <th class="table-menu__title">Previous <span class="arrow-ttl-up arrow-ttl-down"></span></th> -->
+                  <th class="table-menu__title arrow-ttl-up arrow-ttl-down" data-position="5">Value </th>
+                </tr>
+              </thead>
+              <tbody class="table-menu__body-list">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
       <section class="contact section" id="contact">
         <div class="container">
           <div class="contact__wrapper">
@@ -347,9 +371,10 @@
       </aside>
       <form class="form" action="./test.php" id="form-contact-us" name="form-contact-us" method="post">
 
-        <input class="form__field-item" type="text" placeholder="Name" name="name" required>
-        <input class="form__field-item" type="email" placeholder="Email" name="email" required>
-        <textarea class="form__area-item" placeholder="Message" name="message" required></textarea>
+        <input class="form__field-item" type="text" placeholder="Name" name="name" maxlength="50" required>
+        <input class="form__field-item" type="email" placeholder="Email" name="email" maxlength="50" required>
+        <textarea class="form__area-item" placeholder="Message" name="message" maxlength="500" required></textarea>
+        <div class="counter"><span class="counter__numb">0</span>/<span class="counter__max-length"></span>500</div>
         <input class="btn-more" type="submit" value="Submit" form="form-contact-us">
 
       </form>
@@ -363,7 +388,7 @@
         <div class="signin-form__inp-list">
           <label for="email-sgn" class="signin-form__inp-lbl">Email</label>
           <input type="email" class="signin-form__inp-item" name="email-sgn" id="email-sgn"
-            placeholder="example@gmail.com" required>
+            placeholder="example@gmail.com" maxlength="50" required>
           <label for="password" class="signin-form__inp-lbl">Password</label>
           <input type="password" class="signin-form__inp-item" name="password-sg" id="password-sg"
             placeholder="Password" required>
@@ -389,22 +414,24 @@
       <div class="login-form__inner">
         <div class="login-form__inp-list">
           <!-- <label for="nickname" class="login-form__inp-lbl">Nickname</label> -->
-          <input type="text" class="login-form__inp-item" name="nickname" id="nickname" placeholder="Nickname" required>
+          <input type="text" class="login-form__inp-item" name="nickname" id="nickname" placeholder="Nickname"
+            maxlength="50" required>
           <span class="login__warning wng-itm-1 hidden">Имя должно состоять из минимум 5 символов</span>
           <!-- <label for="email-lg" class="login-form__inp-lbl">Email</label> -->
           <input type="email" class="login-form__inp-item" name="email-lg" id="email-lg" placeholder="example@gmail.com"
-            required>
+            maxlength="50" required>
           <!-- <label for="password-lg1" class="login-form__inp-lbl">Password</label> -->
-          <span class="login__warning wng-itm-2 hidden">Имя должно состоять из минимум 10 символов</span>
+          <span class="login__warning wng-itm-2 hidden">Email должен состоять из минимум 10 символов</span>
           <input type="password" class="login-form__inp-item  login-form__inp-pas" name="password-lg1" id="password-lg1"
             placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" form="login-form" required>
           <span class="login-form__eye form__eye close-eye"></span>
           <!-- <label for="password-lg2" class="login-form__inp-lbl">Confirm password</label> -->
-          <span class="login__warning wng-itm-3 hidden">Пароль должен состоять из минимум 5 символов и содержать символы:строчные, заглавыне, цифры </span>
+          <span class="login__warning wng-itm-3 hidden">Пароль должен состоять из минимум 5 символов и содержать
+            символы:строчные, заглавыне, цифры. Пример:12345qwerQWER </span>
           <input type="password" class="login-form__inp-item login-form__inp-cnf-pas" name="password-lg2"
             id="password-lg2" placeholder="Confirm password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}"
             form="login-form" required>
-          <span class="login__warning wng-itm-4 hidden">Пароли должны свопадать </span>
+          <span class="login__warning wng-itm-4 hidden">Пароли должны совпадать </span>
 
         </div>
         <div class="login-form__btn-list">
