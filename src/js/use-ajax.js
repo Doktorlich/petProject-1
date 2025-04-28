@@ -63,7 +63,22 @@ promiseFetch
 
             // Создаем функцию для сортировки по стоимости валюты
             const rows = Array.from(document.querySelectorAll(".table-menu__row"));
+            // function sortRowsByValue() {
+            //     rows.sort((a, b) => {
+            //         if (e.target.dataset.position == 1 || e.target.dataset.position == 2) {
+            //             const aValue = a.querySelectorAll(".table-menu__col")[e.target.dataset.position].innerText;
+            //             const bValue = b.querySelectorAll(".table-menu__col")[e.target.dataset.position].innerText;
+            //             return aValue.localeCompare(bValue);
+            //         } else {
+            //             const aValue = parseFloat(a.getElementsByClassName("table-menu__col")[e.target.dataset.position].innerText);
+            //             const bValue = parseFloat(b.getElementsByClassName("table-menu__col")[e.target.dataset.position].innerText);
+            //             return aValue - bValue;
+            //         }
+            //     });
 
+            //     const tableBody = document.querySelector(".table-menu__body-list");
+            //     rows.forEach(row => tableBody.appendChild(row));
+            // }
             if (clickCount % 2 === 0) {
                 rows.sort((a, b) => {
                     if (e.target.dataset.position == 1 || e.target.dataset.position == 2) {
@@ -71,8 +86,8 @@ promiseFetch
                         const bValue = b.querySelectorAll(".table-menu__col")[e.target.dataset.position].innerText;
                         return aValue.localeCompare(bValue);
                     } else {
-                        const aValue = parseFloat(a.querySelectorAll(".table-menu__col")[e.target.dataset.position].innerText);
-                        const bValue = parseFloat(b.querySelectorAll(".table-menu__col")[e.target.dataset.position].innerText);
+                        const aValue = parseFloat(a.getElementsByClassName("table-menu__col")[e.target.dataset.position].innerText);
+                        const bValue = parseFloat(b.getElementsByClassName("table-menu__col")[e.target.dataset.position].innerText);
                         return aValue - bValue;
                     }
                 });
@@ -83,8 +98,8 @@ promiseFetch
                         const bValue = b.querySelectorAll(".table-menu__col")[e.target.dataset.position].innerText;
                         return bValue.localeCompare(aValue);
                     } else {
-                        const aValue = parseFloat(a.querySelectorAll(".table-menu__col")[e.target.dataset.position].innerText);
-                        const bValue = parseFloat(b.querySelectorAll(".table-menu__col")[e.target.dataset.position].innerText);
+                        const aValue = parseFloat(a.getElementsByClassName("table-menu__col")[e.target.dataset.position].innerText);
+                        const bValue = parseFloat(b.getElementsByClassName("table-menu__col")[e.target.dataset.position].innerText);
                         return bValue - aValue;
                     }
                 });
