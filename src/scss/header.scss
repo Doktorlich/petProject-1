@@ -1,6 +1,6 @@
 .header {
     height: 82px;
-width: 100%;
+    width: 100%;
 }
 
 .nav {
@@ -10,7 +10,7 @@ width: 100%;
     justify-content: space-between;
     height: 82px;
     width: 1600px;
-  
+
     padding-top: 20px;
     &__left-content {
         display: flex;
@@ -32,8 +32,10 @@ width: 100%;
     &__list {
         display: flex;
         height: 42px;
-        justify-content: space-between;
+
         align-items: center;
+        gap: 20px;
+        width: 800px;
     }
 
     // .menu__item

@@ -150,7 +150,7 @@ const comparePass = function (e) {
 btnReg.addEventListener("click", e => {
     verifLgnChbx(e);
     verifNickname(e);
-    verifEmailLg(e);
+    verifEmailLg(e); 
     comparePass(e);
     if (verifLgnChbx(e) && verifNickname(e) && verifEmailLg(e) && comparePass(e)) {
         alert("Регистарция прошла успешно ");
